@@ -1,0 +1,83 @@
+
+body{
+  background: #f4f6fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* container principal */
+.quiz-container{
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* topo do quiz */
+.quiz-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* nome do jogo */
+.quiz-title{
+  font-size: 28px;
+  font-weight: bold;
+  color: #4a6cf7;
+}
+
+/* rodada */
+.quiz-round{
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* número da pergunta */
+.pergunta-numero{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* texto da pergunta */
+.pergunta-texto{
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* container das respostas */
+.answers{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* botões */
+.answers button{
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4a6cf7;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* hover */
+.answers button:hover{
+  background: #3b55c4;
+  transform: scale(1.03);
+}
+
+/* clique */
+.answers button:active{
+  transform: scale(0.97);
+}
