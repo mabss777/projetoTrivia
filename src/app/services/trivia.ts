@@ -9,7 +9,7 @@ import { Resposta } from '../models/resposta';
 })
 export class TriviaService {
 
-  private apiUrl = 'https://opentdb.com/api.php?amount=10&encode=url3986';
+  private apiUrl = 'https://opentdb.com/api.php?amount=50&encode=url3986';
 
   constructor(private http: HttpClient) {}
 
