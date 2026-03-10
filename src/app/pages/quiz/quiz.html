@@ -1,1 +1,21 @@
-<p>quiz works!</p>
+<div *ngIf="perguntas.length > 0">
+
+  <h2>
+    Pergunta {{ perguntaAtual + 1 }}
+  </h2>
+
+  <p>
+    {{ decode(perguntas[perguntaAtual].question) }}
+  </p>
+
+  <div *ngFor="let r of respostas">
+    <button (click)="responder(r)">
+      {{ decode(r) }}
+    </button>
+  </div>
+
+</div>
+
+<div *ngIf="!perguntas.length">
+  <p>Carregando perguntas...</p>
+</div>

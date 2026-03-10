@@ -1,16 +1,18 @@
-import { TestBed } from '@angular/core/testing';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-import { Trivia } from './trivia';
+@Injectable({
+  providedIn: 'root'
+})
+export class TriviaService {
 
-describe('Trivia', () => {
-  let service: Trivia;
+  private apiUrl = 'https://opentdb.com/api.php?amount=10&encode=url3986';
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(Trivia);
-  });
+  constructor(private http: HttpClient) {}
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  getPerguntas(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);
+  }
+
+}
