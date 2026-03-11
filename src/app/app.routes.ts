@@ -4,20 +4,16 @@ import { Home } from './pages/home/home';
 
 export const routes: Routes = [
 
-   {
-    path: 'quiz',
-    component: Quiz
-  },
   {
     path: 'home',
     component: Home
   },
   {
-    path: '',
-    component: Home
+    path: 'quiz',
+    component: Quiz
   },
   {
-    path: 'quiz/:difficulty',
-    component: Quiz
+    path: '',
+    component: Home
   }
 ];

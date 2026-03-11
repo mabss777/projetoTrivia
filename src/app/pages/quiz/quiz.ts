@@ -3,6 +3,7 @@ import { TriviaService } from '../../services/trivia';
 import { InterfacePerguntas } from '../../models/interface-perguntas';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-quiz',
@@ -23,11 +24,13 @@ export class Quiz implements OnInit {
 
   constructor(
     private triviaService: TriviaService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private route: ActivatedRoute
   ) {}
 
   //Busca as perguntas da API e inicia o quiz carregando a primeira pergunta.
   ngOnInit() {
+
     this.triviaService.getPerguntas().subscribe(res => {
       console.log("API:", res);
 
