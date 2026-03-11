@@ -16,5 +16,9 @@ export const routes: Routes = [
   {
     path: 'result',
     component: Result
+  },
+  {
+    path:'',
+    component: Home
   }
 ];
