@@ -15,6 +15,14 @@ body{
   margin: 0;
 }
 
+.logo{
+  width: 390px;
+  margin-bottom: 15px;
+}
+.logo:hover{
+  transform: scale(1.05);
+}
+
 .home-container{
   max-width: 600px;
   width: 100%;
