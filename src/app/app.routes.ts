@@ -15,7 +15,6 @@ export const routes: Routes = [
   },
   {
     path: '',
-    path: 'quiz/:difficulty',
     component: Quiz
   },
   {
