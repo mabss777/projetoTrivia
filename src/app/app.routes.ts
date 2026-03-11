@@ -5,19 +5,16 @@ import { Result } from './pages/result/result';
 
 export const routes: Routes = [
 
-   {
-    path: 'quiz',
-    component: Quiz
-  },
   {
     path: 'home',
     component: Home
   },
   {
-    path: '',
-    component: Home
+    path: 'quiz',
+    component: Quiz
   },
   {
+    path: '',
     path: 'quiz/:difficulty',
     component: Quiz
   },
