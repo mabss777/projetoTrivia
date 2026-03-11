@@ -14,16 +14,7 @@ export const routes: Routes = [
     component: Quiz
   },
   {
-    path: '',
-    path: 'quiz/:difficulty',
-    component: Quiz
-  },
-  {
     path: 'result',
     component: Result
-  },
-  {
-    path: '**',
-    component: Home
   }
 ];

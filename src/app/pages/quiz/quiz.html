@@ -2,10 +2,14 @@
   <div class="quiz-header">
     <div class="quiz-title">Quiz.io</div>
 
-    <div class="quiz-round">Rodada {{ rodadaAtual }} / {{ totalRodadas }}</div>
+    <div class="quiz-round">
+      Rodada {{ rodadaAtual }} / {{ totalRodadas }}
+    </div>
   </div>
 
-  <div class="pergunta-numero">Pergunta {{ perguntaAtual + 1 }}</div>
+  <div class="pergunta-numero">
+    Pergunta {{ perguntaAtual + 1 }}
+  </div>
 
   <div class="pergunta-texto">
     {{ decode(perguntas[perguntaAtual]?.question || '') }}
@@ -15,14 +19,6 @@
     <button
       *ngFor="let r of respostas"
       (click)="responder(r)"
-      [disabled]="bloquearClique"
-      [ngClass]="{
-        correta: mostrarResultado && r === perguntas[perguntaAtual].correct_answer,
-        errada:
-          mostrarResultado &&
-          r === respostaSelecionada &&
-          r !== perguntas[perguntaAtual].correct_answer
-      }"
     >
       {{ decode(r) }}
     </button>
