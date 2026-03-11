@@ -1,59 +1,91 @@
-# AtividadeTrivia
+# 🎮 Quiz.io - Trivia Game em Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+Um jogo de Quiz Trivia desenvolvido com Angular, que consome perguntas de uma API externa e desafia o usuário a responder corretamente para acumular pontos.
 
-## Development server
+O projeto apresenta múltiplas rodadas, embaralhamento de respostas e feedback visual para respostas corretas e incorretas.
 
-To start a local development server, run:
+## 🚀 Funcionalidades
 
-```bash
-ng serve
-```
+✔ Consumo de API de perguntas de trivia
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+✔ Sistema de rodadas
 
-## Code scaffolding
+✔ Pontuação do jogador
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+✔ Feedback visual para respostas (correta/incorreta)
 
-```bash
-ng generate component component-name
-```
+✔ Embaralhamento de alternativas
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+✔ Tela de resultado ao final do quiz
 
-```bash
-ng generate --help
-```
+✔ Navegação entre páginas com Angular Router
 
-## Building
+## 🧠 Como funciona
 
-To build the project run:
+O jogo busca perguntas de uma API de Trivia.
 
-```bash
-ng build
-```
+**Cada pergunta possui:**
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- 1 resposta correta
 
-## Running unit tests
+- várias respostas incorretas.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+As respostas são embaralhadas antes de aparecer na tela.
 
-```bash
-ng test
-```
+O jogador seleciona uma alternativa.
 
-## Running end-to-end tests
+**O sistema:**
 
-For end-to-end (e2e) testing, run:
+- destaca a resposta correta
 
-```bash
-ng e2e
-```
+- mostra se o jogador errou ou acertou
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Após algumas rodadas, o usuário é levado para a tela de resultado.
 
-## Additional Resources
+## 🛠 Tecnologias utilizadas
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- ⚙ Angular
+
+- 📦 TypeScript
+
+- 🎨 HTML
+
+- 🎨 CSS
+
+- 🌐 Open Trivia Database API
+
+    **API utilizada:**
+
+   https://opentdb.com/
+
+## 🎯 Mecânica do jogo
+
+- O quiz possui 5 rodadas
+
+- Cada resposta correta soma 1 ponto
+
+- Após a última rodada, o jogador é redirecionado para a tela de resultado
+
+## 📚 Aprendizados
+
+**Este projeto foi desenvolvido para praticar:**
+
+- Consumo de APIs no Angular
+
+- Manipulação de estado em componentes
+
+- Angular Router
+
+- Estruturação de projetos Angular
+
+- Lógica de jogos simples
+
+## 👨‍💻 Autoras
+
+Projeto desenvolvido por:
+
+Amabile:
+https://github.com/mabss777
+
+Isadora:
+https://github.com/isagrt
