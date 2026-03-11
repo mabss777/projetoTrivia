@@ -4,7 +4,10 @@ import { Home } from './pages/home/home';
 import { Result } from './pages/result/result';
 
 export const routes: Routes = [
-
+    {
+    path:'',
+    component: Home
+  },
   {
     path: 'home',
     component: Home
@@ -17,8 +20,5 @@ export const routes: Routes = [
     path: 'result',
     component: Result
   },
-  {
-    path:'',
-    component: Home
-  }
+
 ];

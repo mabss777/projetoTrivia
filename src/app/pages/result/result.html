@@ -1,20 +1,20 @@
 <div class="result-container">
 
-  <h1 class="result-title">Resultado Final</h1>
+  <h1 class="result-title">Final Result</h1>
 
   <p class="result-score">
-    Sua pontuação foi:
+    Your score:
   </p>
 
   <div
   class="score"
-  [ngClass]="{ 'score-bom': pontuacao >= 4 }"
+  [ngClass]="{ 'score-bom': pontuacao >= 3 }"
 >
   {{ pontuacao }}
 </div>
 
   <button class="voltar" routerLink="/home">
-    Jogar novamente
+    Play again!
   </button>
 
 </div>

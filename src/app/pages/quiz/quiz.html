@@ -1,11 +1,11 @@
 <div class="quiz-container" *ngIf="perguntas.length > 0">
 
   <div class="quiz-header">
-    <div class="quiz-title">Quiz.io</div>
-    <div class="quiz-round">Rodada {{ rodadaAtual }} / {{ totalRodadas }}</div>
+    <div class="quiz-title">Quiz<span class="dot">.</span>io</div>
+    <div class="quiz-round">Round {{ rodadaAtual }} / {{ totalRodadas }}</div>
   </div>
 
-  <div class="pergunta-numero">Pergunta {{ perguntaAtual + 1 }}</div>
+  <div class="pergunta-numero">Question {{ perguntaAtual + 1 }}</div>
 
   <div class="pergunta-texto">
     {{ decode(perguntas[perguntaAtual]?.question || '') }}
@@ -27,5 +27,5 @@
 </div>
 
 <div class="carregando" *ngIf="!perguntas.length">
-  <p>Buscando perguntas desafiadoras para você...</p>
+  <p>Looking for questions...</p>
 </div>

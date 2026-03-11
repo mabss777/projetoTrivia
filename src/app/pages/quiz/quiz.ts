@@ -18,7 +18,7 @@ export class Quiz implements OnInit {
   respostas: string[] = [];
 
   rodadaAtual = 1;
-  totalRodadas = 5; // Definimos o limite fixo de 5 aqui
+  totalRodadas = 5; // Definimos o limite fixo de 5 rodadas
 
   respostaSelecionada: string | null = null;
   mostrarResultado = false;
@@ -31,10 +31,8 @@ export class Quiz implements OnInit {
 
   ngOnInit() {
     this.triviaService.getPerguntas().subscribe(res => {
-      // O PULO DO GATO: Usamos .slice(0, 5) para pegar apenas as primeiras 5 perguntas
-      // Mesmo que a API mande 10 ou 50, o quiz só terá 5.
       const todasAsPerguntas = res.results ?? [];
-      this.perguntas = todasAsPerguntas.slice(0, this.totalRodadas);
+      this.perguntas = todasAsPerguntas.slice(0, this.totalRodadas); // vai gerar o numero de rodadas definidas
 
       if (this.perguntas.length > 0) {
         this.carregarRespostas();
@@ -92,7 +90,7 @@ export class Quiz implements OnInit {
       this.carregarRespostas();
       this.cdr.detectChanges();
 
-    }, 1500);
+    }, 1000);
   }
 
   decode(text: string): string {
