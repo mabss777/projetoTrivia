@@ -1,15 +1,11 @@
 <div class="quiz-container" *ngIf="perguntas.length > 0">
+
   <div class="quiz-header">
     <div class="quiz-title">Quiz.io</div>
-
-    <div class="quiz-round">
-      Rodada {{ rodadaAtual }} / {{ totalRodadas }}
-    </div>
+    <div class="quiz-round">Rodada {{ rodadaAtual }} / {{ totalRodadas }}</div>
   </div>
 
-  <div class="pergunta-numero">
-    Pergunta {{ perguntaAtual + 1 }}
-  </div>
+  <div class="pergunta-numero">Pergunta {{ perguntaAtual + 1 }}</div>
 
   <div class="pergunta-texto">
     {{ decode(perguntas[perguntaAtual]?.question || '') }}
@@ -17,8 +13,13 @@
 
   <div class="answers">
     <button
-      *ngFor="let r of respostas"
+      *ngFor="let r of respostas; trackBy: trackByFn"
       (click)="responder(r)"
+      [disabled]="mostrarResultado"
+      [ngClass]="{
+        'correta': mostrarResultado && r === perguntas[perguntaAtual].correct_answer,
+        'incorreta': mostrarResultado && r === respostaSelecionada && r !== perguntas[perguntaAtual].correct_answer
+      }"
     >
       {{ decode(r) }}
     </button>
@@ -26,5 +27,5 @@
 </div>
 
 <div class="carregando" *ngIf="!perguntas.length">
-  <p>Carregando perguntas...</p>
+  <p>Buscando perguntas desafiadoras para você...</p>
 </div>

@@ -93,11 +93,28 @@ body{
   text-align: center;
 }
 
-.correta{
-  background-color: #4CAF50 !important;
+/* Estilo Base */
+button {
+  transition: all 0.3s ease;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background-color: white;
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 5px;
 }
 
-.errada{
-  background-color: #f44336 !important;
+/* Quando acertar OU para mostrar qual era a certa após um erro */
+.correta {
+  background-color: #28a745 !important;
+  color: white !important;
+  border-color: #1e7e34 !important;
 }
 
+/* Apenas para o botão que o usuário clicou e estava errado */
+.incorreta {
+  background-color: #dc3545 !important;
+  color: white !important;
+  border-color: #bd2130 !important;
+}
