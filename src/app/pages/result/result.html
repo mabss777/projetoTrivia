@@ -1,1 +1,20 @@
-<p>result works!</p>
+<div class="result-container">
+
+  <h1 class="result-title">Resultado Final</h1>
+
+  <p class="result-score">
+    Sua pontuação foi:
+  </p>
+
+  <div
+  class="score"
+  [ngClass]="{ 'score-bom': pontuacao >= 4 }"
+>
+  {{ pontuacao }}
+</div>
+
+  <button class="voltar" routerLink="/home">
+    Jogar novamente
+  </button>
+
+</div>

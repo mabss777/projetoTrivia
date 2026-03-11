@@ -1,51 +1,76 @@
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #6a85ff, #b06ab3);
-  height: 100vh;
+/*
+Branco: #fcf5e4
+amarelo: #edb217
+preto: #212121
+vermelho: #f4143f
+*/
+
+body{
+  background: #212121;
+  font-family: "IBM Plex Sans", sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.home-container {
-  background: white;
+.home-container{
+  max-width: 600px;
+  width: 100%;
   padding: 40px;
+  background: #fcf5e4;
   border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  width: 350px;
   margin: 50px auto;
+  margin-top: 100px;
 }
 
-.home-container h1 {
+.home-container h1{
+  font-family: "Coiny", system-ui;
+  font-size: 50px;
+  color: #edb217;
   margin-bottom: 10px;
-  color: #333;
 }
 
-.home-container p {
-  color: #666;
-  margin-bottom: 25px;
+.home-container p{
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
 }
 
-.botoes {
+.botoes{
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
-.botoes button {
-  padding: 12px;
+.botoes button{
+  padding: 15px;
   border: none;
   border-radius: 8px;
-  background: #6a85ff;
+  background: #edb217;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
 }
 
-.botoes button:hover {
-  background: #4f6df0;
+.botoes button:hover{
+  background: #d8a014;
   transform: scale(1.03);
+}
+
+.botoes button:active{
+  transform: scale(0.97);
+}
+
+.botoes button.secundario{
+  background: #f4143f;
+}
+
+.botoes button.secundario:hover{
+  background: #d91235;
 }
