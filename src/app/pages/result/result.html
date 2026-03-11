@@ -1,1 +1,14 @@
-<p>result works!</p>
+<h1>Resultado</h1>
+
+<h2>Pontuação: {{ pontuacao }}</h2>
+
+<ul>
+  @for (p of perguntas; track p) {
+
+    <li>
+      <p><strong>Pergunta:</strong> {{ decodeURIComponent(p.question) }}</p>
+      <p><strong>Resposta correta:</strong> {{ decodeURIComponent(p.correct_answer) }}</p>
+    </li>
+
+  }
+</ul>

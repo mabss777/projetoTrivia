@@ -86,7 +86,10 @@ responder(resposta: string) {
     if (this.rodadaAtual > this.totalRodadas) {
 
       this.router.navigate(['/result'], {
-        state: { pontuacao: this.pontuacao }
+        state: {
+          pontuacao: this.pontuacao,
+          perguntas: this.perguntas
+         }
       });
 
       return;
