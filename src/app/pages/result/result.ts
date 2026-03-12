@@ -17,8 +17,11 @@ export class Result {
   constructor(private router: Router) {
     const nav = this.router.getCurrentNavigation();
 
+// verifica se existem dados enviados pela navegação
     if (nav?.extras.state) {
+      // recebe a pontuação enviada da página do quiz
       this.pontuacao = nav.extras.state['pontuacao'];
+      // recebe as perguntas enviadas da página do quiz
       this.perguntas = nav.extras.state['perguntas'];
     }
   }

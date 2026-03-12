@@ -8,40 +8,54 @@ vermelho: #f4143f
 body{
   background: #212121;
   font-family: "IBM Plex Sans", sans-serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   min-height: 100vh;
   margin: 0;
 }
 
 .result-container{
-  max-width: 600px;
-  width: 100%;
-  padding: 40px;
+  max-width: 650px;
+  width: 90%;
+
+  padding: 45px;
+
   background: #fcf5e4;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+
   text-align: center;
-  margin: 50px auto;
 }
 
 .result-title{
   font-family: "Coiny", system-ui;
-  font-size: 50px;
+
+  font-size: 44px;
+
   color: #edb217;
-  margin-bottom: 20px;
+
+  margin-bottom: 30px;
 }
 
 .result-score{
-  font-size: 20px;
+  font-size: 22px;
   color: #333;
+
+  margin-bottom: 10px;
 }
 
 .score{
-  font-size: 60px;
+  font-size: 64px;
   font-weight: bold;
+
   color: #f4143f;
+
+  margin-bottom: 20px;
 }
 
 .score-bom{
@@ -49,18 +63,30 @@ body{
 }
 
 .voltar{
-  padding: 15px 25px;
+  padding: 16px 30px;
+
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+
   background: #edb217;
   color: white;
+
   font-size: 18px;
+  font-weight: bold;
+
   cursor: pointer;
-  transition: 0.2s;
+
   margin-top: 30px;
+
+  transition: all 0.2s ease;
 }
 
 .voltar:hover{
   background: #d8a014;
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
+
+.voltar:active{
+  transform: translateY(0);
+}
+

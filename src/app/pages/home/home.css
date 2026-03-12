@@ -5,96 +5,85 @@ preto: #212121
 vermelho: #f4143f
 */
 
-body{
+body {
   background: #212121;
   font-family: "IBM Plex Sans", sans-serif;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   min-height: 100vh;
   margin: 0;
 }
 
-.home-container{
+.home-container {
   max-width: 650px;
   width: 90%;
-
   padding: 50px 40px;
-
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   text-align: center;
-
   background-color: #fcf5e4;
 }
 
-.logo{
+.logo {
   width: 320px;
   max-width: 100%;
-  margin-bottom: 20px;
-
+  margin-bottom: 5px;
   transition: transform 0.2s ease;
 }
 
-.logo:hover{
+.logo:hover {
   transform: scale(1.05);
 }
 
-.home-container h1{
+.home-container h1 {
   font-family: "Coiny", system-ui;
-  font-size: 44px;
-
+  font-size: 50px;
   color: #edb217;
-
-  margin-bottom: 25px;
-}
-
-.home-container p{
-  font-size: 18px;
-  color: #555;
-
   margin-bottom: 30px;
 }
 
-.botoes{
+.home-container p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+.botoes {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.botoes button{
+.botoes button {
   padding: 16px;
-
   border: none;
   border-radius: 10px;
-
   background: #edb217;
   color: white;
-
   font-size: 18px;
   font-weight: bold;
-
   cursor: pointer;
-
   transition: all 0.2s ease;
 }
 
-.botoes button:hover{
+.botoes button:hover {
   background: #d8a014;
   transform: translateY(-2px);
 }
 
-.botoes button:active{
+.botoes button:active {
   transform: translateY(0);
 }
 
-.botoes button.secundario{
+.botoes button.secundario {
   background: #f4143f;
 }
 
-.botoes button.secundario:hover{
+.botoes button.secundario:hover {
   background: #d91235;
+}
+
+.dot{
+  color: #212121;
 }
