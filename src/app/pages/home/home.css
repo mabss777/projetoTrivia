@@ -8,43 +8,54 @@ vermelho: #f4143f
 body{
   background: #212121;
   font-family: "IBM Plex Sans", sans-serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   min-height: 100vh;
   margin: 0;
 }
 
-.logo{
-  width: 390px;
-  margin-bottom: 15px;
+.home-container{
+  max-width: 650px;
+  width: 90%;
+
+  padding: 50px 40px;
+
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  text-align: center;
+
+  background-color: #fcf5e4;
 }
+
+.logo{
+  width: 320px;
+  max-width: 100%;
+  margin-bottom: 20px;
+
+  transition: transform 0.2s ease;
+}
+
 .logo:hover{
   transform: scale(1.05);
 }
 
-.home-container{
-  max-width: 600px;
-  width: 100%;
-  padding: 40px;
-  background: #fcf5e4;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-  text-align: center;
-  margin: 50px auto;
-  margin-top: 100px;
-}
-
 .home-container h1{
   font-family: "Coiny", system-ui;
-  font-size: 50px;
+  font-size: 44px;
+
   color: #edb217;
-  margin-bottom: 10px;
+
+  margin-bottom: 25px;
 }
 
 .home-container p{
   font-size: 18px;
   color: #555;
+
   margin-bottom: 30px;
 }
 
@@ -55,24 +66,29 @@ body{
 }
 
 .botoes button{
-  padding: 15px;
+  padding: 16px;
+
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+
   background: #edb217;
   color: white;
+
   font-size: 18px;
   font-weight: bold;
+
   cursor: pointer;
-  transition: 0.2s;
+
+  transition: all 0.2s ease;
 }
 
 .botoes button:hover{
   background: #d8a014;
-  transform: scale(1.03);
+  transform: translateY(-2px);
 }
 
 .botoes button:active{
-  transform: scale(0.97);
+  transform: translateY(0);
 }
 
 .botoes button.secundario{

@@ -87,8 +87,8 @@ body{
 
 .carregando{
   font-size: 50px;
-  font-weight: bolder;
-  color: #edb217;
+  font-weight: 900;
+  color: #fcf5e4;
   font-family: "IBM Plex Sans", sans-serif;
   align-items: center;
   text-align: center;

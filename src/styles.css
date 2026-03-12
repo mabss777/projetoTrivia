@@ -7,6 +7,23 @@ vermelho: #f4143f
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap');
 
-*{
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+body{
   font-family: "IBM Plex Sans", sans-serif;
+
+  display: flex;
+  align-items: center;   /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+
+  background:
+  linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.178)),
+  url('/assets/background.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
